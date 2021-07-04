@@ -9,14 +9,19 @@ game_window = pygame.display.set_mode((width, heigh))
 
 clock = pygame.time.Clock()
 
-while True:
-    # Handle events
-    # Excute logic
-    # Update display
-    game_window.fill(white_color)
-    pygame.display.update()
 
-    clock.tick(60)
+def run_game_loop():
+    while True:
+        events = pygame.event.get()
+        for event in events:
+            if event.type == pygame.QUIT:
+                return
+        game_window.fill(white_color)
+        pygame.display.update()
 
+        clock.tick(60)
+
+
+run_game_loop()
 pygame.quit()
 quit()
