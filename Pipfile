@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 flake8 = "*"
-pygame = "*"
 
 [dev-packages]
 
