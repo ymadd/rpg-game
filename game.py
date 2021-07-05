@@ -1,5 +1,6 @@
 import pygame
 from gameObject import GameObject
+from player import Player
 
 
 class Game:
@@ -13,6 +14,7 @@ class Game:
         self.background = GameObject(
             0, 0, self.width, self.heigh, 'assets/background.png')
         self.tresure = GameObject(375, 50, 50, 50, 'assets/treasure.png')
+        self.player = Player(375, 700, 50, 50, 'assets/player.png', 10)
 
         self.clock = pygame.time.Clock()
 
@@ -23,6 +25,8 @@ class Game:
             self.background.image, (self.background.x, self.background.y))
         self.game_window.blit(
             self.tresure.image, (self.tresure.x, self.tresure.y))
+        self.game_window.blit(
+            self.player.image, (self.player.x, self.player.y))
         pygame.display.update()
 
     def run_game_loop(self):
