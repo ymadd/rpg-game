@@ -8,5 +8,5 @@ class Player(GameObject):
 
         self.speed = speed
 
-    def move(self, direction, max_height):
+    def move(self, direction):
         self.y += (direction * self.speed)
